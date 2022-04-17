@@ -1,0 +1,28 @@
+[
+    {
+      "name": "default",
+      "type": "sqlite",
+      "database": "./like_sistemas.db",
+      "autoSchemaSync": true,
+      "entities": [
+        "src/models/**/*{.js,.ts}"
+      ],
+      "migrations": ["src/migrations/**/*{.js,.ts}"],
+      "cli": {
+        "migrationsDir": "src/migrations/"
+      }
+    },
+    {
+        "name": "test",
+        "type": "sqlite",
+        "database": "./database_test.db",
+        "autoSchemaSync": true,
+        "entities": [
+          "src/models/**/*{.js,.ts}"
+        ],
+        "migrations": ["src/migrations/**/*{.js,.ts}"],
+        "cli": {
+          "migrationsDir": "src/migrations/"
+        }
+      }
+  ]

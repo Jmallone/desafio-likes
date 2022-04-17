@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "a45b8aaf-1236-4c80-8a65-e62c5983b7d6",
+		"name": "boilerplate_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Get User by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
+							},
+							{
+								"key": "Accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-BR,en-US;q=0.7,en;q=0.3"
+							},
+							{
+								"key": "Referer",
+								"value": "https://sistemas.anatel.gov.br/scra/Relatorio/Repetidora.asp?nav=4&c=1&pref="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Origin",
+								"value": "https://sistemas.anatel.gov.br"
+							},
+							{
+								"key": "DNT",
+								"value": "1"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Cookie",
+								"value": "f5avraaaaaaaaaaaaaaaa_session_=HKADHOFDBJPIMMAHOPGOCBEANDKJHMGACDPAKLHDECJOMBLIPLEKJFMNNCGBDCGOEGADNNHOOAKBHGHHHNJAJPHGCNBNFLKIKKFFFMIKOCILDDKFBAILGEIDGPFKBMBF; TS01a8b626=01d35fb8bada9f1910396cf93d5f3e3a5d81366e702cc1a05f10abfb1c682a48980c15cce8698fb71543e0f6d1184bd827f405abb1; TSdd33fa0c027=08b6c77e2bab2000aab13a220b5337125797d7b5889df606f57218a2d39e806dff8f857eb3126dde0825b5aeb21130003de66dfdd2611f06897bf62ccc125881b6f09439effc92bbc798391d9aaf0fde18fd383a406dbb947ac3c2e8d533c478; ASPSESSIONIDQSQBRBAT=MCJFJKNBEGPABMJKGEDHNGKJ; BIGipServerpool_sistemas_anatel_pd_asp_easp=1090654380.20480.0000; BIGipServerhttps_vs_sistemas_anatel_dmz=587337900.47873.0000; TS6f70b664027=08b6c77e2bab2000a23123cf6e447d6b35111df8ed332c10d79c914e6982627508c95425ce280c8b08b71dc256113000cdf0e40d51adce1a5edd5f7f5b0cc771f8d11be83d3b3ef3bbc55fecf70b225bc9e658ba8695befd05d3a711e1d15368; BIGipServerpool_sistemas_anatel_pd_asp_sis=1090654380.20480.0000; BIGipServerpool_sistemas_anatel_pd_asp_apoiositarweb=1124208812.20480.0000; TS00000000076=08b6c77e2bab28004fce4388951c51f5a34a6fce533419ad6767726b5a46e2e0f01ffc807e38dcbed15118a3c0f6e7490806d64ac009d000efaba4acd02e8613e49ea2556290f928083d8658dcb72bfc057e1dfe7bd9e7b81b2412ebc316ca217767b106cecee120b1bdc42a3efdc6a2ade82ebf21179382ee620edc0c292d0b02b178c4162a5100ddecb00a3cc1576a441490786c2101fb390c3f5fbf8730b445c7e33a51322e89709e751eb87e1bb06577e5e58575d5e8c06d40c21e6d593fcb78b9930dacf7506ca14b2305374341325ec35f89dc4255daaa82829f6c39d440a347d802a39688442aa819a6acbc9263a9960ced97d2d6f2690f6bbcbedc93cd4017ac6369d630; TSPD_101_DID=08b6c77e2bab28004fce4388951c51f5a34a6fce533419ad6767726b5a46e2e0f01ffc807e38dcbed15118a3c0f6e7490806d64ac00638007076be541c195af65c3b46f987c7dc59ccf8448245be19e704396eb94ed4a810ca64f0149f3f27ebea1ec5fcc75e428e1643461a83c594cd; BIGipServerpool_sistemas_anatel_pd_asp_sec=1090654380.20480.0000; f5avraaaaaaaaaaaaaaaa_session_=LMIKEOKIPCABPNOACHAEDDGHFKAGFBLEMIIMNHEMELBEDGAJHFIACDCICJAIHNLBNEADMKNLCLFKDGFGFBPAPHKFGOEBBJECCEDPMHMADNEGDFKHNEFPHHIKBICIGNPM; ASPSESSIONIDSQTBSDCR=DAHNDPBCIJPIGPNAJHKAMEFD; ASPSESSIONIDSQSBRBBT=OHPJDGNBCNIKJMJONPIBGLDB; BIGipServerpool_sistemas_anatel_pd_java_jb7_mosaico-sch=1543639212.20480.0000; BIGipServerpool_sistemas_anatel_pd_java_jb5_siscadastrosimplificado=1459685898.20480.0000; ASPSESSIONIDQSQDRDDQ=LIKLDPJAPOEOCIPGOAPCNDMP; ASPSESSIONIDQQQDSCCQ=IMMHEFDAGGJLJADJKKJLECKE; BIGipServerpool_sistemas_anatel_pd_asp_psv=1090654380.20480.0000; BIGipServerpool_sistemas_anatel_pd_java_jb7_mosaico-portal=1543639212.20480.0000; BIGipServerpool_sistemas_anatel_pd_java_jb7_mosaico-login=1543639212.20480.0000; BIGipServerpool_sistemas_anatel_pd_java_jb7_mosaico-cadastroDeUsuario=1543639212.20480.0000; ASPSESSIONIDSSTCRBAS=ACLHMNMBMKPNACNCBDCHGPPJ; ASPSESSIONIDQQTCQDCR=PJLDAKJCHOAHGEOEHPNFIBPC; BIGipServerpool_sistemas_anatel_pd_java_jb8_anexar-api=2667645450.20480.0000; ASPSESSIONIDSSTDRABS=BIDPNHKCJMDDLPEFOEIJIAHH; BIGipServerpool_sistemas_anatel_pd_asp_scra=1090654380.20480.0000; ASPSESSIONIDQSTCRAAS=CNADCMOCLKPMHLMBIBHCGJCE; ASPSESSIONIDSSTDRDDQ=JPHPMCEDKMKGLODOCAOJJJJO; ASPSESSIONIDSSSAQBBT=LJCABGGDPECINLMAICKLALMA; ASPSESSIONIDSSQAQABT=EEFFJCEBKHANFJDGNEIOLLHN; ASPSESSIONIDQQQARDBS=CHMBLOPAMACLKEBNOBEBGKGK; ASPSESSIONIDSSTCRABS=IKCBBLMBJNDCDCGJFNLEONLC; ASPSESSIONIDSSSASCDR=LDAEPHDDKNOIAKLBCEFMKPEC; ASPSESSIONIDSQRBQCBS=FGAGDHJCMCJCHLCHDEMOHFKA; ASPSESSIONIDCQBDTBAQ=HMEOJFLCMOABBHMNHMIMBCCH; BIGipServerpool_sistemas_anatel_pd_asp_boleto=1107431596.20480.0000; ASPSESSIONIDSQTDSCDQ=CFMHHDGDIDJHIANGIOIDJNOP; ASPSESSIONIDQSTCTBBS=FGELOIODJDKEDLFAOBHHJMHL; ASPSESSIONIDQQTBRCAT=DPDBMPCALPDLNJDEADGNNDGN; ASPSESSIONIDQSQBSABT=MKPMLMCACPJBNADCECJLDDNH; BIGipServerpool_sistemas_anatel_pd_asp_sacp=1124208812.20480.0000; ASPSESSIONIDCSBBSABS=OFOPPMLAKHAIPEGIPOKJENOH; ASPSESSIONIDSSTCQBDT=AIGFLIMBGFOFOKIFNFBFMCPM; ASPSESSIONIDSSTAQADT=CJAFMGFCLBNAIJHEOCIEBHKA; ASPSESSIONIDQSSASBDS=JHJFFKLBACHMKOEEHKDPAOHM"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "max-age=0"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "acao",
+									"value": "e",
+									"type": "text"
+								},
+								{
+									"key": "PagInf",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "NumReg",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "pSiglaUF",
+									"value": "PR",
+									"type": "text"
+								},
+								{
+									"key": "pindTipoUF",
+									"value": "i",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"michel\",\n    \"email\": \"123@123.com\",\n    \"password\": \"123muudar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mariana\",\n    \"password\": \"123123\",\n    \"email\": \"mariana@brasil.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BOOK",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"michel\",\n    \"author\": \"123@123.com\",\n    \"user\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books/user/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Book by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Morro dos Ventos Uivantes\",\n    \"author\": \"Mario de Andrade\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
