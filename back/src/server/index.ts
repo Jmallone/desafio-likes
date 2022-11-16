@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 import compression from 'compression';
 import cors from 'cors';
-
+import passportJwt from '../config/passport';
 
 import express from 'express';
 
@@ -13,6 +13,9 @@ import { connect } from './database';
 // Instantiate express
 const server = express();
 server.use(compression());
+
+// Passport Config
+server.use(passportJwt().initialize());
 
 // Connect to sqlite
 if (process.env.NODE_ENV !== 'test') {

@@ -1,5 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import Book from './book.model';
+import ActiveSession from './activeSession.model';
 
 @Entity()
 export default class User {
@@ -15,10 +16,16 @@ export default class User {
   @Column({ type: 'text', nullable: false })
   password!: string;
 
-  @Column({ type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
+  @Column({ type: 'text', nullable: false, default: 'normal' })
+  role!: string;
+
+  @Column({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   date?: Date;
 
   @OneToMany(() => Book, book => book.user)
   books!: Book[];
+
+  @OneToMany(() => ActiveSession, (activeSession) => activeSession.user)
+  activeSessions!: ActiveSession[];
 
 }

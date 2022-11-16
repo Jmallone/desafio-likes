@@ -1,13 +1,17 @@
 import express from 'express';
 import userController from '../controllers/user.controller';
 
+import { checkToken, is } from '../config/safeRoutes';
+
 const router = express.Router();
 
 router
-    .get("/", userController.getUsers)
-    .get("/:id", userController.getUserById)
+    .get("/",checkToken, is('admin'), userController.getUsers)
+    .get("/:id",checkToken, is('admin'), userController.getUserById)
     .post("/", userController.createUser)
-    .put("/:id", userController.editUser)
-    .delete("/:id", userController.deleteUser)
+    .post("/login", userController.loginUser)
+    .post("/logout", checkToken, userController.logoutUser)
+    .put("/:id",checkToken, is('admin'), userController.editUser)
+    .delete("/:id",checkToken, is('admin'), userController.deleteUser)
 
 export default router;
